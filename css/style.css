@@ -167,7 +167,7 @@ a {
 
 .footer__line {
     margin: 0 auto 60px;
-    width: 1140px;
+    max-width: 1140px;
     height: 1px;
     background-color: rgba(156, 156, 156, 1);
 }
