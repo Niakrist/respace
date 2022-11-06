@@ -1,0 +1,376 @@
+@import url(https://fonts.googleapis.com/css?family=Dongle:300,regular,700);
+@import url(https://fonts.googleapis.com/css?family=League+Gothic:regular);
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #C9C9C9;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1650px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+
+.header__nav {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__nav-logo-link {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+
+.header__nav-logo-text {
+    max-width: 45px;
+    font-size: 26px;
+    line-height: 50%;
+    font-family: Dongle;
+    color: #000000;
+}
+
+.nav__menu {
+    display: flex;
+    column-gap: 54px;
+    align-items: center;
+    font-family: sans-serif;
+    /* font-family: 'League Gothic'; */
+}
+
+.nav__menu-link:not(:last-child) {
+    font-size: 14px;
+    line-height: 1.214;
+}
+
+.nav__menu-link:last-child {
+    padding: 20px 20px;
+    font-size: 14px;
+    line-height: 0px;
+    letter-spacing: 0.02em;
+    color: #fff;
+    background-color: #8888FD;
+    font-weight: 600;
+}
+
+.nav__menu-link:not(:last-child):hover {
+    text-decoration: underline;
+}
+
+.nav__menu-link:last-child:hover {
+    background-color: #7b7be7;
+}
+
+
+/* works */
+/* works */
+/* works */
+
+.works__column {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+}
+
+.works__row {
+    display: flex;
+    column-gap: 10px;
+
+}
+
+.works__item {
+    position: relative;
+}
+
+.works__item-text {
+    width: 470px;
+    height: 90px;
+    font-size: 16px;
+    line-height: 94%;
+    color: #fff;
+    background-color: #8888FD;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+    z-index: 5;
+
+}
+
+.works__item::after {
+    position: absolute;
+    content: '';
+    background-color: rgba(255, 255, 255, 0);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: background-color 0.2s ease-in;
+}
+
+.works__item:hover::after {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+.works__item:hover .works__item-text {
+    opacity: 1;
+}
+
+
+/* footer */
+/* footer */
+/* footer */
+/* footer */
+
+
+.footer {
+    padding: 50px 0 150px;
+}
+
+.footer__line {
+    margin: 0 auto 60px;
+    width: 1140px;
+    height: 1px;
+    background-color: rgba(156, 156, 156, 1);
+}
+
+.footer__row-soc {
+    display: flex;
+    justify-content: center;
+    column-gap: 30px;
+}
+
+.svg__link circle {
+    fill: #717171;
+} 
+
+.svg__link path {
+    fill: #E6E6E6;
+} 
+
+.svg__link:hover circle {
+    fill: #8888FD;
+} 
+
+/* Project */
+
+/* hero */
+.hero__img {
+    object-fit: cover;
+    height: calc(100vh - 80px);
+    width: 100%;
+}
+
+/*  object */ 
+
+.object {
+    padding: 75px 0 150px;
+}
+
+.object__title {
+    margin-bottom: 15px;
+    font-size: 48px;
+    line-height: 1.166;
+    font-weight: 800;
+    font-family: Raleway;
+}
+
+.object__description {
+    line-height: 1.25;
+    font-family: 'League Gothic';
+}
+
+.object__description span {
+    font-weight: 700;
+}
+
+.object__slider {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 100px;
+
+}
+.slide {
+    max-height: 840px;
+    position: relative;
+    /* margin-left: 60px; */
+}
+
+.arrow__left,
+.arrow__right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 17px;
+    height: 34px;
+    object-fit: cover;
+}
+
+.arrow__left {
+    left: -62px;
+}
+
+.arrow__right {
+    right: -62px;
+}
+
+.slide__img {
+
+    object-fit: cover;
+}
+
+.slide__nav {
+    max-height: 840px;
+    overflow: hidden;
+}
+
+.slide__nav-item {
+    display: block;
+}
+
+.slide__nav-item:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+/* Plan */
+
+.container__row {
+    display: flex;
+}
+.plan__img {
+    flex-grow: 1;
+}
+
+.plan__img-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.plan__img-img {
+    margin: 0 auto;
+    margin-bottom: 80px;
+}
+.plan__img-scale {
+    float: right
+}
+
+
+.plan__nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.plan__nav-link {
+    text-align: right;
+    color: #717171;
+    font-weight: 700;
+    line-height: 1.25;
+    transition: color 0.2s ease-in;
+}
+
+.plan__nav-link:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.plan__nav-link:hover {
+    color:#000000;
+}
+
+/* footer__nav */ 
+
+.footer__navigation {
+    margin-top: 150px;
+}
+
+.footer__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__nav-link {
+    font-weight: 700;
+    line-height: 1.25;
+    color: #717171;
+    transition: color 0.2s ease-in;
+    position: relative;
+}
+
+.footer__nav-link:hover {
+    color: #000000;
+}
+
+.footer__nav-link:first-child {
+    padding-left: 10px;
+}
+
+.footer__nav-link:first-child::before {
+    content: '';
+    position: absolute;
+    background-image: url('./../img/arrow-left-small.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 6px;
+    height: 12px;
+    top: 55%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.footer__nav-link:last-child {
+    padding-right: 10px;
+}
+
+.footer__nav-link:last-child::after {
+    content: '';
+    position: absolute;
+    background-image: url('./../img/arrow-right-small.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 6px;
+    height: 12px;
+    top: 55%;
+    transform: translateY(-50%);
+    right: 0;
+}
