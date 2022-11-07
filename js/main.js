@@ -9,5 +9,5 @@ plan.addEventListener('click', function() {
 
 fasad.addEventListener('click', function() {
   changeImg.src = './img/petra-fasad.jpg'
-  console.log('./img/petra-fasad.jpg');
+  console.log('./img/petra-fasad.png');
 })
