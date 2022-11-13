@@ -19,7 +19,13 @@ img {
     max-width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
     padding: 0;
     margin: 0;
     font-size: 16px;
@@ -37,7 +43,14 @@ a {
     padding: 0 15px;
 }
 
-
+.bread-crumbs {
+    margin-top: 70px;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.33;
+    font-family: 'Noto Sans';
+    color: #717171;
+}
 
 .header__nav {
     padding: 20px 0;
@@ -180,15 +193,15 @@ a {
 
 .svg__link circle {
     fill: #717171;
-} 
+}
 
 .svg__link path {
     fill: #E6E6E6;
-} 
+}
 
 .svg__link:hover circle {
     fill: #8888FD;
-} 
+}
 
 /* Project */
 
@@ -199,7 +212,7 @@ a {
     width: 100%;
 }
 
-/*  object */ 
+/*  object */
 
 .object {
     padding: 75px 0 150px;
@@ -225,10 +238,12 @@ a {
 .object__slider {
     margin-top: 50px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     column-gap: 100px;
 
 }
+
 .slide {
     max-height: 840px;
     position: relative;
@@ -246,11 +261,11 @@ a {
 }
 
 .arrow__left {
-    left: -62px;
+    left: 62px;
 }
 
 .arrow__right {
-    right: -62px;
+    right: 62px;
 }
 
 .slide__img {
@@ -276,6 +291,7 @@ a {
 .container__row {
     display: flex;
 }
+
 .plan__img {
     flex-grow: 1;
 }
@@ -291,6 +307,7 @@ a {
     margin: 0 auto;
     margin-bottom: 80px;
 }
+
 .plan__img-scale {
     float: right
 }
@@ -314,10 +331,142 @@ a {
 }
 
 .plan__nav-link:hover {
-    color:#000000;
+    color: #000000;
 }
 
-/* footer__nav */ 
+/* PAGE ABOUT START */
+
+.about {
+    padding: 95px 0 130px;
+}
+
+.about__row {
+    display: flex;
+    column-gap: 30px;
+}
+
+.about__row+.about__row {
+    margin-top: 40px;
+}
+
+.about__row-item {
+    width: calc(100% / 3);
+}
+
+.about__row-photo {
+    height: 590px;
+    background-color: #9C9C9C;
+    margin-bottom: 20px;
+}
+
+.about__row-name {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.15;
+    margin-bottom: 10px;
+    font-family: 'Raleway';
+
+}
+
+.about__row-post {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.16;
+    font-family: 'Raleway';
+
+}
+
+.about__content {
+    margin-top: 80px;
+}
+
+/* PAGE ABOUT END */
+
+/* PAGE PRICE START */
+
+.price {}
+
+.container {}
+
+.price__row {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+}
+
+.price__row-item {
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    justify-content: space-between;
+}
+
+.price__description {
+    font-family: 'Raleway';
+}
+
+.price__description h2 {
+    margin-bottom: 12px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+.price__description ul {
+    padding-left: 20px;
+}
+
+.price__description li,
+.price__description p {
+    font-size: 12px;
+    line-height: 1.166;
+}
+
+
+
+.price__price-daedlines p {
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 400;
+    font-family: 'Raleway';
+}
+
+.price__price-star {
+    font-family: 'League Gothic';
+    font-size: 10px;
+    line-height: 1.2;
+    color: #717171;
+}   
+
+.price__price a {
+    display: block;
+    margin-top: 15px;
+    font-size: 12px;
+    line-height: 1.166;
+    text-align: center;
+    color: #000000;
+    font-family: 'Raleway';
+    text-decoration-line: underline;
+}
+
+.price__price a:hover {
+    text-decoration: none;
+}
+
+.price__price-daedlines {
+    display: flex;
+    justify-content: space-between;
+}
+.price__price-daedlines span {
+    font-family: 'Radio Canada';
+    font-weight: 700;
+}
+
+/* PAGE PRICE END */
+
+/* footer__nav */
+
 
 .footer__navigation {
     margin-top: 150px;
@@ -377,4 +526,43 @@ a {
     top: 55%;
     transform: translateY(-50%);
     right: 0;
+}
+
+
+@media (max-width:930px) {
+    .object__slider {
+        flex-direction: column;
+        column-gap: unset;
+        row-gap: 30px;
+    }
+
+    .slide__nav {
+        display: flex;
+    }
+
+    .slide__nav-item:not(:last-child) {
+        margin-bottom: 0px;
+    }
+    .slide__nav-item:not(:last-child) {
+        margin-right: 10px;
+    }
+
+    .container__row {
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width:630px) {
+    .nav__menu {
+        display: none;
+    }
+
+    .object__title {
+        font-size: 36px;
+    }
+
+    .footer__nav {
+        flex-direction: column;
+        row-gap: 15px;
+    }
 }
