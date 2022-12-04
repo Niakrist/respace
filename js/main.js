@@ -4,6 +4,11 @@ const changeImg = document.querySelector('#change-img');
 const btnMenu = document.querySelector('.btn__menu');
 const navMenuMob = document.querySelector('.nav__menu-mob');
 
+
+btnMenu.addEventListener('click', function() {
+  navMenuMob.classList.toggle('nav__menu-mob--active');
+})
+
  plan.addEventListener('click', function() {
    changeImg.src = './img/petra-plan.jpg'
    console.log('./img/petra-plan.jpg');
@@ -15,6 +20,3 @@ const navMenuMob = document.querySelector('.nav__menu-mob');
 })
 
 
-btnMenu.addEventListener('click', function() {
-  navMenuMob.classList.toggle('nav__menu-mob--active');
-})
