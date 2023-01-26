@@ -51,7 +51,8 @@ sliderList.forEach(function (slide, index) {
 
 /* click arrow right */
 
-arrowRight.addEventListener('click', function (event) {
+if(arrowRight) {
+  arrowRight.addEventListener('click', function (event) {
   event.preventDefault();
   const slideCurret = document.querySelector('[data-active]');
   const slideCurretIndex = slideCurret.dataset.index;
@@ -63,10 +64,12 @@ arrowRight.addEventListener('click', function (event) {
   slideNext.classList.remove('hidden');
   slideNext.setAttribute('data-active', '');
 })
+}
 
 /* click arrow left */
 
-arrowLeft.addEventListener('click', function(event) {
+if(arrowLeft) {
+  arrowLeft.addEventListener('click', function(event) {
   event.preventDefault();
   const slideCurrent = document.querySelector('[data-active]');
   const slideCurrentIndex = slideCurrent.dataset.index;
@@ -78,3 +81,4 @@ arrowLeft.addEventListener('click', function(event) {
   slidePrev.classList.remove('hidden');
   slidePrev.setAttribute('data-active', '');
 })
+}
