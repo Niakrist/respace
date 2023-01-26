@@ -50,6 +50,7 @@ sliderList.forEach(function (slide, index) {
 }); 0
 
 /* click arrow right */
+
 arrowRight.addEventListener('click', function (event) {
   event.preventDefault();
   const slideCurret = document.querySelector('[data-active]');
