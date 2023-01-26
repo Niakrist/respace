@@ -1,8 +1,8 @@
 // const fasad = document.querySelector('#fasad');
 // const plan = document.querySelector('#plan')
 // const changeImg = document.querySelector('#change-img');  
-// const btnMenu = document.querySelector('.btn__menu');
-// const navMenuMob = document.querySelector('.nav__menu-mob');
+const btnMenu = document.querySelector('.btn__menu');
+const navMenuMob = document.querySelector('.nav__menu-mob');
 
 // plan.addEventListener('click', function() {
 //   changeImg.src = './img/petra-plan.jpg'
@@ -15,9 +15,9 @@
 // })
 
 
-// btnMenu.addEventListener('click', function() {
-//   navMenuMob.classList.toggle('nav__menu-mob--active');
-// })
+btnMenu.addEventListener('click', function() {
+  navMenuMob.classList.toggle('nav__menu-mob--active');
+})
 
 /* */
 
