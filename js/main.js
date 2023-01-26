@@ -51,7 +51,7 @@ sliderList.forEach(function (slide, index) {
 
 /* click arrow right */
 
-arrowRight && arrowRight = addEventListener('click', function (event) {
+arrowRight.addEventListener('click', function (event) {
   event.preventDefault();
   const slideCurret = document.querySelector('[data-active]');
   const slideCurretIndex = slideCurret.dataset.index;
@@ -66,7 +66,7 @@ arrowRight && arrowRight = addEventListener('click', function (event) {
 
 /* click arrow left */
 
-arrowLeft && arrowLeft = addEventListener('click', function(event) {
+arrowLeft.addEventListener('click', function(event) {
   event.preventDefault();
   const slideCurrent = document.querySelector('[data-active]');
   const slideCurrentIndex = slideCurrent.dataset.index;
